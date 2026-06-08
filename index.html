@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>塩入温泉 | さぬきの秘湯 | 香川県まんのう町</title>
+<meta name="description" content="香川県まんのう町の塩入温泉。温泉・宿泊・産直市・飛行館。水と緑に囲まれたさぬきの秘湯。有限会社仲南振興公社。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green:      #1a3a2a;
+  --green-dark: #0d1f16;
+  --green-mid:  #2a5a3a;
+  --gold:       #C9A96E;
+  --gold-lt:    #e8c99e;
+  --bg:         #F8F5F0;
+  --bg-warm:    #f0ebe3;
+  --text:       #1a1a14;
+  --muted:      #5a5a4a;
+  --white:      #ffffff;
+  --emg-bg:     #2d1a1a;
+  --fh: 'Shippori Mincho','Noto Serif JP',serif;
+  --fb: 'Noto Serif JP',serif;
+  --mw: 1100px;
+  --g: clamp(16px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.8;padding-top:104px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+.wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--g)}
+.sec{padding:clamp(64px,10vw,120px) 0}
+
+/* ─── Section header ─── */
+.sh{text-align:center;margin-bottom:clamp(40px,6vw,72px)}
+.sh-en{font-family:var(--fh);font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+.sh-title{font-family:var(--fh);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--green);letter-spacing:.08em;line-height:1.4}
+.sh-line{width:40px;height:1px;background:var(--gold);margin:20px auto 0}
+
+/* ─── Emergency Banner ─── */
+.emg{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--emg-bg);height:40px;display:flex;align-items:center;padding:0 var(--g)}
+.emg-in{max-width:var(--mw);margin:0 auto;width:100%;display:flex;align-items:center;gap:12px}
+.emg-badge{background:var(--gold);color:var(--emg-bg);font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.emg-text{font-size:.78rem;color:var(--gold-lt);letter-spacing:.03em;line-height:1.3}
+
+/* ─── Navigation ─── */
+#nav{position:fixed;top:40px;left:0;right:0;z-index:90;height:64px;display:flex;align-items:center;padding:0 var(--g);transition:background .4s,box-shadow .4s}
+#nav.scrolled{background:var(--green);box-shadow:0 2px 24px rgba(0,0,0,.25)}
+.nav-in{max-width:var(--mw);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--fh);font-size:1.1rem;font-weight:700;color:var(--white);letter-spacing:.12em;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.nav-logo small{display:block;font-size:.52rem;font-weight:400;letter-spacing:.08em;color:rgba(255,255,255,.65);margin-top:1px}
+.nav-links{display:flex;list-style:none;gap:2px}
+.nav-links a{font-family:var(--fh);font-size:.76rem;color:rgba(255,255,255,.9);padding:8px 12px;letter-spacing:.04em;white-space:nowrap;transition:color .2s,background .2s;border-radius:2px}
+.nav-links a:hover{color:var(--gold);background:rgba(255,255,255,.06)}
+.nav-hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;background:none;border:none;min-width:44px;min-height:44px;justify-content:center}
+.nav-hbg span{display:block;width:24px;height:1.5px;background:var(--white);transition:transform .25s,opacity .2s}
+.nav-hbg.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hbg.open span:nth-child(2){opacity:0}
+.nav-hbg.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ─── Mobile Nav ─── */
+#mnav{display:none;position:fixed;inset:0;z-index:80;top:104px}
+#mnav.open{display:block}
+.mnav-ov{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+.mnav-dr{position:absolute;top:0;right:0;width:260px;height:100%;background:var(--green);transform:translateX(100%);transition:transform .3s ease;overflow-y:auto}
+#mnav.open .mnav-dr{transform:translateX(0)}
+.mnav-list{list-style:none;padding:24px 0}
+.mnav-list a{display:block;padding:16px 32px;font-family:var(--fh);font-size:.95rem;color:var(--white);border-bottom:1px solid rgba(201,169,110,.2);letter-spacing:.05em;transition:color .2s,background .2s}
+.mnav-list a:hover{color:var(--gold);background:rgba(255,255,255,.04)}
+
+/* ─── Hero ─── */
+.hero{position:relative;height:100vh;min-height:580px;overflow:hidden;display:flex;align-items:center;justify-content:center;background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80');background-size:cover;background-position:center}
+.hero-ov{position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:1}
+.hero-ov::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(13,31,22,.45) 100%)}
+.hero-ct{position:relative;z-index:2;text-align:center;padding:0 var(--g);max-width:820px}
+.hero-ey{font-family:var(--fh);font-size:clamp(.72rem,1.5vw,.88rem);letter-spacing:.4em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:20px}
+.hero-sub{font-family:var(--fh);font-size:clamp(1rem,2.5vw,1.5rem);font-weight:400;color:rgba(255,255,255,.88);letter-spacing:.15em;display:block;margin-bottom:8px;line-height:1.6}
+.hero-h1{font-family:var(--fh);font-size:clamp(2.4rem,6vw,4.8rem);font-weight:800;color:var(--white);letter-spacing:.12em;line-height:1.2;margin-bottom:20px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+.hero-tag{font-family:var(--fh);font-size:clamp(.82rem,1.8vw,1rem);color:var(--gold-lt);letter-spacing:.2em;margin-bottom:40px;display:block}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);color:var(--gold-lt);padding:14px 36px;font-family:var(--fh);font-size:.8rem;letter-spacing:.2em;transition:background .3s,color .3s}
+.hero-cta:hover{background:var(--gold);color:var(--green-dark)}
+.hero-scr{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .4s}
+.hero-scr-t{font-size:.58rem;letter-spacing:.3em;color:rgba(255,255,255,.45);text-transform:uppercase}
+.hero-scr-l{width:1px;height:48px;background:linear-gradient(to bottom,rgba(255,255,255,.45),transparent);animation:scrl 1.8s ease infinite}
+@keyframes scrl{
+  0%{transform:scaleY(0);transform-origin:top}
+  49%{transform:scaleY(1);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+
+/* ─── Status Strip ─── */
+.sstrip{background:var(--white);border-bottom:1px solid rgba(26,58,42,.12)}
+.sstrip-in{max-width:var(--mw);margin:0 auto;padding:0 var(--g);display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.sstrip-in::-webkit-scrollbar{display:none}
+.sitem{flex-shrink:0;display:flex;flex-direction:column;gap:5px;padding:18px 20px;border-right:1px solid rgba(26,58,42,.08);min-width:170px}
+.sitem:last-child{border-right:none}
+.sitem-name{font-family:var(--fh);font-size:.86rem;font-weight:600;color:var(--green);letter-spacing:.04em}
+.sbadge{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;padding:2px 10px;border-radius:2px;width:fit-content}
+.sbadge-dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}
+.sbadge--open{background:#e8f4ef;color:#1a6040}
+.sbadge--closed{background:#fef2f2;color:#9b1c1c}
+.sitem-info{font-size:.7rem;color:var(--muted);line-height:1.5}
+
+/* ─── About ─── */
+.about{background:var(--bg);text-align:center}
+.about-catch{font-family:var(--fh);font-size:clamp(1.3rem,3vw,2.1rem);font-weight:700;color:var(--green);letter-spacing:.15em;line-height:1.7;margin-bottom:20px}
+.about-catch em{color:var(--gold);font-style:normal}
+.about-div{width:60px;height:1px;background:var(--gold);margin:28px auto}
+.about-op{font-size:.82rem;color:var(--muted);letter-spacing:.08em}
+
+/* ─── Facility Section ─── */
+.fac{background:var(--white)}
+.fac-in{display:flex;min-height:540px;align-items:stretch}
+.fac--rev .fac-in{flex-direction:row-reverse}
+.fac-img{flex:1;position:relative;overflow:hidden}
+.fac-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.fac-img:hover img{transform:scale(1.04)}
+.fac-img-st{position:absolute;top:20px;left:20px;z-index:2}
+.fac-img-note{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.45);color:rgba(255,255,255,.7);font-size:.63rem;padding:6px 12px;letter-spacing:.04em}
+.fac-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,72px) clamp(28px,5vw,60px);max-width:560px}
+.fac-en{font-family:var(--fh);font-size:.66rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+.fac-h2{font-family:var(--fh);font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:700;color:var(--green);letter-spacing:.08em;line-height:1.4;margin-bottom:18px}
+.fac-line{width:32px;height:1px;background:var(--gold);margin-bottom:22px}
+.fac-desc{font-size:.88rem;color:var(--muted);line-height:2;margin-bottom:24px}
+.fac-meta{display:flex;flex-direction:column;gap:6px;padding:14px 18px;background:var(--bg);border-left:2px solid var(--gold);margin-bottom:24px}
+.fac-meta-r{display:flex;gap:10px;font-size:.78rem}
+.fac-meta-k{color:var(--muted);width:86px;flex-shrink:0}
+.fac-meta-v{color:var(--text)}
+.fac-meta-v.cl{color:#c0392b;font-weight:600}
+.closed-note{display:flex;gap:12px;padding:14px 18px;background:#fef2f2;border-left:3px solid #c0392b;font-size:.8rem;color:#7b1c1c;line-height:1.7;margin-bottom:20px}
+.btn-g{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--green-dark);padding:12px 28px;font-family:var(--fh);font-size:.76rem;font-weight:600;letter-spacing:.12em;transition:background .25s,color .25s;width:fit-content}
+.btn-g:hover{background:var(--green);color:var(--gold)}
+.btn-og{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);color:var(--gold);padding:11px 27px;font-family:var(--fh);font-size:.76rem;letter-spacing:.12em;transition:background .25s,color .25s;width:fit-content}
+.btn-og:hover{background:var(--gold);color:var(--green-dark)}
+
+/* ─── Market Highlight ─── */
+.mhl{background:var(--green);padding:clamp(64px,10vw,100px) 0;text-align:center}
+.mhl-ey{font-family:var(--fh);font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
+.mhl-h2{font-family:var(--fh);font-size:clamp(1.2rem,3vw,2rem);font-weight:700;color:var(--white);letter-spacing:.1em;line-height:1.7;margin-bottom:22px}
+.mhl-h2 em{color:var(--gold);font-style:normal}
+.mhl-txt{font-size:.88rem;color:rgba(255,255,255,.72);max-width:460px;margin:0 auto 30px;line-height:2}
+.mhl-hrs{display:inline-flex;gap:40px;border:1px solid rgba(201,169,110,.35);padding:20px 36px;margin-bottom:28px}
+.mhl-hrs-item{text-align:center}
+.mhl-hrs-l{font-size:.62rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px}
+.mhl-hrs-v{font-family:var(--fh);font-size:1.05rem;font-weight:600;color:var(--white);letter-spacing:.04em}
+.mhl-note{font-size:.7rem;color:rgba(255,255,255,.45);letter-spacing:.05em}
+
+/* ─── Reviews ─── */
+.rev{background:var(--bg-warm)}
+.rev-in{max-width:700px;margin:0 auto;text-align:center;padding:0 var(--g)}
+.rev-rating{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:36px}
+.rev-num{font-family:var(--fh);font-size:3.2rem;font-weight:700;color:var(--green);line-height:1}
+.stars{display:flex;gap:3px}
+.star{width:22px;height:22px;color:var(--gold)}
+.star-sm{width:14px;height:14px;color:var(--gold)}
+.rev-cnt{font-size:.8rem;color:var(--muted);margin-top:4px;text-align:left}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;margin-bottom:20px}
+.rev-card{background:var(--white);padding:24px;border-top:2px solid var(--gold)}
+.rev-card-st{display:flex;gap:3px;margin-bottom:10px}
+.rev-card-txt{font-size:.8rem;color:var(--muted);line-height:1.8;margin-bottom:10px}
+.rev-card-au{font-size:.68rem;color:var(--muted);opacity:.7}
+.rev-note{font-size:.7rem;color:var(--muted);padding-top:16px;border-top:1px solid rgba(26,58,42,.1)}
+
+/* ─── Access ─── */
+.acc{background:var(--white)}
+.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,72px);align-items:start}
+.acc-map{aspect-ratio:4/3;background:var(--bg-warm);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;border:1px solid rgba(26,58,42,.12);color:var(--muted);font-size:.82rem}
+.acc-map-icon{font-size:2rem}
+.acc-info{display:flex;flex-direction:column;gap:20px}
+.acc-lbl{font-family:var(--fh);font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px}
+.acc-val{font-size:.88rem;color:var(--text);line-height:1.9}
+.acc-tel{font-family:var(--fh);font-size:1.6rem;font-weight:700;color:var(--green)}
+.acc-div{width:100%;height:1px;background:rgba(26,58,42,.1)}
+
+/* ─── Footer ─── */
+footer{background:var(--green-dark);border-top:1px solid var(--gold);padding:clamp(40px,6vw,64px) var(--g) 32px;color:rgba(255,255,255,.7)}
+.ft-in{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.ft-name{font-family:var(--fh);font-size:1.1rem;font-weight:700;color:var(--white);letter-spacing:.12em;margin-bottom:4px}
+.ft-op{font-size:.7rem;color:var(--gold);letter-spacing:.08em;margin-bottom:14px}
+.ft-addr{font-size:.78rem;line-height:1.9;font-style:normal}
+.ft-tel{font-family:var(--fh);font-size:1.2rem;font-weight:600;color:var(--white);margin-top:8px}
+.ft-nav-t{font-family:var(--fh);font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.ft-nav-l{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-nav-l a{font-size:.8rem;color:rgba(255,255,255,.58);letter-spacing:.03em;transition:color .2s;display:flex;align-items:center;min-height:22px}
+.ft-nav-l a:hover{color:var(--gold)}
+.ft-bot{max-width:var(--mw);margin:0 auto;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-copy{font-size:.7rem;color:rgba(255,255,255,.28)}
+
+/* ─── Scroll Animations ─── */
+[data-a]{opacity:0;transition:opacity .8s ease,transform .8s ease}
+[data-a="fi"]{opacity:0}
+[data-a="su"]{opacity:0;transform:translateY(36px)}
+[data-a="sl"]{opacity:0;transform:translateX(-40px)}
+[data-a="sr"]{opacity:0;transform:translateX(40px)}
+[data-a].vis{opacity:1;transform:none}
+[data-d="1"]{transition-delay:.1s}
+[data-d="2"]{transition-delay:.2s}
+[data-d="3"]{transition-delay:.3s}
+[data-d="4"]{transition-delay:.4s}
+[data-d="5"]{transition-delay:.5s}
+
+/* ─── Responsive ─── */
+@media(max-width:1000px){
+  .rev-grid{grid-template-columns:1fr}
+  .acc-grid{grid-template-columns:1fr}
+  .ft-in{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  body{padding-top:96px}
+  #nav{height:56px}
+  #mnav{top:96px}
+  .nav-links{display:none}
+  .nav-hbg{display:flex}
+  .hero{height:100vh}
+  /* facility: stack */
+  .fac-in,.fac--rev .fac-in{flex-direction:column}
+  .fac-img{min-height:260px}
+  .fac-body{max-width:100%}
+  /* market hours */
+  .mhl-hrs{flex-direction:column;gap:20px;padding:20px 28px}
+  .ft-in{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:480px){
+  .emg-text{font-size:.7rem}
+  .hero-h1{letter-spacing:.06em}
+  .fac-body{padding:28px 16px}
+  .sitem{min-width:148px;padding:14px}
+  .ft-in{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Emergency Banner -->
+<div class="emg" role="alert">
+  <div class="emg-in">
+    <span class="emg-badge">休館中</span>
+    <p class="emg-text">【重要】塩入温泉は天井修繕工事のため現在休館中です。回数券をお持ちの方はお知らせをご確認ください。</p>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav id="nav" aria-label="メインナビゲーション">
+  <div class="nav-in">
+    <a href="#" class="nav-logo">塩入温泉<small>Shioiri Onsen Resort · Kagawa</small></a>
+    <ul class="nav-links" role="list">
+      <li><a href="#onsen">日帰り入浴</a></li>
+      <li><a href="#stay">宿泊</a></li>
+      <li><a href="#market">産直市</a></li>
+      <li><a href="#museum">飛行館</a></li>
+      <li><a href="#access">アクセス・お問い合わせ</a></li>
+    </ul>
+    <button class="nav-hbg" id="hbg" aria-label="メニューを開く" aria-expanded="false" aria-controls="mnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mnav" aria-hidden="true">
+  <div class="mnav-ov" id="mnav-ov"></div>
+  <nav class="mnav-dr" aria-label="モバイルメニュー">
+    <ul class="mnav-list">
+      <li><a href="#onsen">日帰り入浴</a></li>
+      <li><a href="#stay">宿泊</a></li>
+      <li><a href="#market">産直市</a></li>
+      <li><a href="#museum">飛行館</a></li>
+      <li><a href="#access">アクセス・お問い合わせ</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Hero -->
+<section class="hero" aria-label="メインビジュアル">
+  <div class="hero-ov"></div>
+  <div class="hero-ct">
+    <span class="hero-ey">Shioiri Onsen &middot; Manno-cho Kagawa</span>
+    <span class="hero-sub">水と緑に囲まれた</span>
+    <h1 class="hero-h1">さぬきの秘湯</h1>
+    <span class="hero-tag">温まって、買って、泊まって、歩行浴</span>
+    <a href="#status" class="hero-cta">施設を見る &darr;</a>
+  </div>
+  <div class="hero-scr" id="hero-scr">
+    <span class="hero-scr-t">Scroll</span>
+    <div class="hero-scr-l"></div>
+  </div>
+</section>
+
+<!-- Facility Status Strip -->
+<div id="status" class="sstrip">
+  <div class="sstrip-in">
+    <div class="sitem">
+      <span class="sitem-name">塩入温泉</span>
+      <span class="sbadge sbadge--closed"><span class="sbadge-dot"></span>休館中</span>
+      <p class="sitem-info">天井修繕工事中<br>再開日未定</p>
+    </div>
+    <div class="sitem">
+      <span class="sitem-name">ふれあいロッジ</span>
+      <span class="sbadge sbadge--open"><span class="sbadge-dot"></span>営業中</span>
+      <p class="sitem-info">定休日なし<br>TEL 0877-78-3837</p>
+    </div>
+    <div class="sitem">
+      <span class="sitem-name">ふるさと研修館</span>
+      <span class="sbadge sbadge--open"><span class="sbadge-dot"></span>営業中</span>
+      <p class="sitem-info">定休日なし<br>TEL 0877-78-3322</p>
+    </div>
+    <div class="sitem">
+      <span class="sitem-name">仲南産直市</span>
+      <span class="sbadge sbadge--open"><span class="sbadge-dot"></span>営業中</span>
+      <p class="sitem-info">8:00〜17:30<br>年末年始のみ休み</p>
+    </div>
+    <div class="sitem">
+      <span class="sitem-name">二宮忠八飛行館</span>
+      <span class="sbadge sbadge--open"><span class="sbadge-dot"></span>営業中</span>
+      <p class="sitem-info">10:00〜16:00<br>水・木曜定休</p>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about sec">
+  <div class="wrap">
+    <p class="about-catch" data-a="su">
+      温まって、<em>買って、</em>泊まって、<em>歩行浴</em>
+    </p>
+    <div class="about-div"></div>
+    <p class="about-op" data-a="fi" data-d="2">運営：有限会社 仲南振興公社 ｜ 香川県仲多度郡まんのう町</p>
+  </div>
+</section>
+
+<!-- Onsen (closed) -->
+<section id="onsen" class="fac">
+  <div class="fac-in">
+    <div class="fac-img" data-a="sr">
+      <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?w=1200&q=80" alt="温泉浴場イメージ" loading="lazy">
+      <div class="fac-img-st">
+        <span class="sbadge sbadge--closed"><span class="sbadge-dot"></span>現在休館中</span>
+      </div>
+      <p class="fac-img-note">※写真は仮素材です。実際の施設写真に差し替え予定。</p>
+    </div>
+    <div class="fac-body" data-a="sl">
+      <span class="fac-en">Day Spa</span>
+      <h2 class="fac-h2">日帰り入浴<br>塩入温泉</h2>
+      <div class="fac-line"></div>
+      <div class="closed-note">
+        <div>
+          <strong>現在休館中</strong>（天井修繕工事のため）<br>
+          再開日は未定です。回数券をお持ちの方は最新のお知らせをご確認ください。
+        </div>
+      </div>
+      <p class="fac-desc">
+        地下500mから湧出する天然温泉。ほんのりとした塩分を含むやわらかな湯質で、
+        疲れた体を芯からほぐします。内風呂・露天風呂・サウナを完備し、
+        緑豊かな里山の景観を楽しみながらご入浴いただけます。
+      </p>
+      <div class="fac-meta">
+        <div class="fac-meta-r"><span class="fac-meta-k">現在の状況</span><span class="fac-meta-v cl">休館中（修繕工事）</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">通常入浴料</span><span class="fac-meta-v">大人 600円 / 小人 300円</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">通常営業時間</span><span class="fac-meta-v">10:00〜21:00（最終受付 20:30）</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">通常定休日</span><span class="fac-meta-v">水曜日（祝日の場合は翌日）</span></div>
+      </div>
+      <a href="#access" class="btn-og">最新情報・お問い合わせ &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stay -->
+<section id="stay" class="fac fac--rev" style="background:var(--bg-warm)">
+  <div class="fac-in">
+    <div class="fac-img" data-a="sl">
+      <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1200&q=80" alt="宿泊施設イメージ" loading="lazy">
+      <p class="fac-img-note">※写真は仮素材です。実際の施設写真に差し替え予定。</p>
+    </div>
+    <div class="fac-body" data-a="sr">
+      <span class="fac-en">Stay</span>
+      <h2 class="fac-h2">宿泊・研修<br>ふれあいロッジ<br>ふるさと研修館</h2>
+      <div class="fac-line"></div>
+      <p class="fac-desc">
+        まんのう町の豊かな自然に囲まれた宿泊施設。
+        グループ合宿・企業研修・家族旅行など多目的にご利用いただけます。
+        ふれあいロッジと研修館の2棟が揃い、小規模から大型グループまで対応。
+      </p>
+      <div class="fac-meta">
+        <div class="fac-meta-r"><span class="fac-meta-k">ロッジ 定休日</span><span class="fac-meta-v">なし（通年営業）</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">ロッジ TEL</span><span class="fac-meta-v">0877-78-3837</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">研修館 定休日</span><span class="fac-meta-v">なし（通年営業）</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">研修館 TEL</span><span class="fac-meta-v">0877-78-3322</span></div>
+      </div>
+      <a href="#access" class="btn-g">宿泊のご予約・お問い合わせ &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Market Highlight -->
+<div class="mhl">
+  <div class="wrap">
+    <span class="mhl-ey" data-a="fi">Farm Market</span>
+    <h2 class="mhl-h2" data-a="su">温泉休館中も、<br>産直市は<em>毎日元気に営業中</em></h2>
+    <p class="mhl-txt" data-a="fi" data-d="2">
+      まんのう町・仲南地域の農家が丹精込めて育てた旬の野菜・果物・加工品が並びます。
+      地元の生産者と直接つながる、温かい交流の場。
+    </p>
+    <div class="mhl-hrs" data-a="su" data-d="3">
+      <div class="mhl-hrs-item">
+        <span class="mhl-hrs-l">営業時間</span>
+        <span class="mhl-hrs-v">8:00〜17:30</span>
+      </div>
+      <div class="mhl-hrs-item">
+        <span class="mhl-hrs-l">定休日</span>
+        <span class="mhl-hrs-v">年末年始のみ</span>
+      </div>
+    </div>
+    <p class="mhl-note" data-a="fi" data-d="4">毎日営業 ／ 新鮮な地産地消をお楽しみください</p>
+  </div>
+</div>
+
+<!-- Market -->
+<section id="market" class="fac">
+  <div class="fac-in">
+    <div class="fac-img" data-a="sr">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&q=80" alt="産直市イメージ" loading="lazy">
+      <p class="fac-img-note">※写真は仮素材です。実際の施設写真に差し替え予定。</p>
+    </div>
+    <div class="fac-body" data-a="sl">
+      <span class="fac-en">Farm Market</span>
+      <h2 class="fac-h2">地産地消<br>仲南産直市</h2>
+      <div class="fac-line"></div>
+      <p class="fac-desc">
+        まんのう町・仲南地域の農家が丹精込めて育てた野菜・果物・加工品が並ぶ産直市場。
+        旬の味覚を産直価格でお買い求めください。
+        地元生産者と直接つながる、温かい交流の場です。
+      </p>
+      <div class="fac-meta">
+        <div class="fac-meta-r"><span class="fac-meta-k">営業時間</span><span class="fac-meta-v">8:00〜17:30</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">定休日</span><span class="fac-meta-v">年末年始のみ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Museum -->
+<section id="museum" class="fac fac--rev" style="background:var(--bg-warm)">
+  <div class="fac-in">
+    <div class="fac-img" data-a="sl">
+      <img src="https://images.unsplash.com/photo-1565060169194-19fabf63012c?w=1200&q=80" alt="飛行館イメージ" loading="lazy">
+      <p class="fac-img-note">※写真は仮素材です。実際の施設写真に差し替え予定。</p>
+    </div>
+    <div class="fac-body" data-a="sr">
+      <span class="fac-en">Museum</span>
+      <h2 class="fac-h2">飛行の先駆者<br>二宮忠八飛行館</h2>
+      <div class="fac-line"></div>
+      <p class="fac-desc">
+        ライト兄弟より先に動力飛行を発明した先駆者・二宮忠八。
+        まんのう町出身の偉人の業績と夢をたどる小さな博物館。
+        ゆっくりと歴史に触れながら、地域の誇りを感じてください。
+      </p>
+      <div class="fac-meta">
+        <div class="fac-meta-r"><span class="fac-meta-k">開館時間</span><span class="fac-meta-v">10:00〜16:00</span></div>
+        <div class="fac-meta-r"><span class="fac-meta-k">定休日</span><span class="fac-meta-v">水曜日・木曜日</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="rev sec">
+  <div class="rev-in">
+    <div class="sh" data-a="fi">
+      <span class="sh-en">Google Reviews</span>
+      <h2 class="sh-title">お客様の声</h2>
+      <div class="sh-line"></div>
+    </div>
+    <div class="rev-rating" data-a="su">
+      <span class="rev-num">4.1</span>
+      <div>
+        <div class="stars">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="rev-cnt">540件のレビュー（Google マップ）</p>
+      </div>
+    </div>
+    <div class="rev-grid" data-a="su" data-d="2">
+      <div class="rev-card">
+        <div class="rev-card-st">
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="rev-card-txt">自然豊かな里山にある温泉です。お湯がとても気持ちよく、露天風呂からの景色が最高でした。また来たいと思います。</p>
+        <span class="rev-card-au">Google ユーザー</span>
+      </div>
+      <div class="rev-card">
+        <div class="rev-card-st">
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="rev-card-txt">産直市はいつも新鮮な野菜が揃っていて、地元の方とのふれあいも楽しい。香川に来るたびに立ち寄ります。</p>
+        <span class="rev-card-au">Google ユーザー</span>
+      </div>
+      <div class="rev-card">
+        <div class="rev-card-st">
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="star-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="rev-card-txt">二宮忠八飛行館は穴場スポット。ライト兄弟より先に飛行機を発明した方がいたことを初めて知りました。感動です。</p>
+        <span class="rev-card-au">Google ユーザー</span>
+      </div>
+    </div>
+    <p class="rev-note">※上記のレビューは Google マップ掲載レビューを参考に再構成しています。</p>
+  </div>
+</section>
+
+<!-- Access -->
+<section id="access" class="acc sec">
+  <div class="wrap">
+    <div class="sh" data-a="fi">
+      <span class="sh-en">Access &amp; Contact</span>
+      <h2 class="sh-title">アクセス・お問い合わせ</h2>
+      <div class="sh-line"></div>
+    </div>
+    <div class="acc-grid">
+      <div data-a="sr">
+        <div class="acc-map">
+          <span class="acc-map-icon">📍</span>
+          <span>Google マップ 埋め込みエリア</span>
+          <a href="https://maps.google.com/?q=香川県仲多度郡まんのう町塩入718-140" target="_blank" rel="noopener" style="color:var(--gold);font-size:.76rem;text-decoration:underline;margin-top:6px">Google マップで開く &rarr;</a>
+        </div>
+      </div>
+      <div class="acc-info" data-a="sl">
+        <div>
+          <span class="acc-lbl">Address</span>
+          <p class="acc-val">〒769-0301<br>香川県仲多度郡まんのう町塩入718-140</p>
+        </div>
+        <div class="acc-div"></div>
+        <div>
+          <span class="acc-lbl">Tel</span>
+          <p class="acc-tel"><a href="tel:0877783363" style="color:inherit">0877-78-3363</a></p>
+        </div>
+        <div class="acc-div"></div>
+        <div>
+          <span class="acc-lbl">By Car</span>
+          <p class="acc-val">高松自動車道「善通寺IC」より約20分<br>高松自動車道「豊中IC」より約15分</p>
+        </div>
+        <div class="acc-div"></div>
+        <div>
+          <span class="acc-lbl">By Train</span>
+          <p class="acc-val">JR土讃線「塩入駅」より徒歩約5分</p>
+        </div>
+        <div class="acc-div"></div>
+        <div>
+          <span class="acc-lbl">Operator</span>
+          <p class="acc-val">有限会社 仲南振興公社</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="ft-in">
+    <div>
+      <p class="ft-name">塩入温泉</p>
+      <p class="ft-op">有限会社 仲南振興公社</p>
+      <address class="ft-addr">〒769-0301<br>香川県仲多度郡まんのう町塩入718-140</address>
+      <p class="ft-tel"><a href="tel:0877783363" style="color:inherit">0877-78-3363</a></p>
+    </div>
+    <nav aria-label="施設">
+      <p class="ft-nav-t">施設案内</p>
+      <ul class="ft-nav-l">
+        <li><a href="#onsen">日帰り入浴（塩入温泉）</a></li>
+        <li><a href="#stay">ふれあいロッジ</a></li>
+        <li><a href="#stay">ふるさと研修館</a></li>
+        <li><a href="#market">仲南産直市</a></li>
+        <li><a href="#museum">二宮忠八飛行館</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="その他">
+      <p class="ft-nav-t">Information</p>
+      <ul class="ft-nav-l">
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#access">お問い合わせ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">Copyright &copy; 仲南振興公社 All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ── Nav scroll ── */
+  var nav = document.getElementById('nav');
+  function chkScroll(){ nav.classList.toggle('scrolled', window.scrollY > 60); }
+  window.addEventListener('scroll', chkScroll, {passive:true});
+  chkScroll();
+
+  /* ── Hamburger ── */
+  var hbg    = document.getElementById('hbg');
+  var mnav   = document.getElementById('mnav');
+  var mnavOv = document.getElementById('mnav-ov');
+
+  function openNav(){
+    hbg.classList.add('open');
+    mnav.classList.add('open');
+    mnav.setAttribute('aria-hidden','false');
+    hbg.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function closeNav(){
+    hbg.classList.remove('open');
+    mnav.classList.remove('open');
+    mnav.setAttribute('aria-hidden','true');
+    hbg.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  hbg.addEventListener('click', function(){ hbg.classList.contains('open') ? closeNav() : openNav(); });
+  mnavOv.addEventListener('click', closeNav);
+  mnav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeNav(); });
+
+  /* ── Scroll animations ── */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('vis');
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('[data-a]').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-a]').forEach(function(el){ el.classList.add('vis'); });
+  }
+
+  /* ── Hero scroll indicator ── */
+  var scr = document.getElementById('hero-scr');
+  if(scr){
+    window.addEventListener('scroll', function(){
+      scr.style.opacity = window.scrollY > 80 ? '0' : '1';
+    }, {passive:true});
+  }
+
+})();
+</script>
+</body>
+</html>
